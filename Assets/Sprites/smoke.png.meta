@@ -132,12 +132,12 @@ TextureImporter:
       name: smoke_0
       rect:
         serializedVersion: 2
-        x: 103
-        y: 1121
-        width: 915
-        height: 575
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 0
+        width: 770
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: smoke_1
       rect:
         serializedVersion: 2
-        x: 1019
-        y: 1121
-        width: 915
-        height: 575
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1006
+        y: 0
+        width: 617
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,36 +171,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: smoke_2
-      rect:
-        serializedVersion: 2
-        x: 1935
-        y: 1121
-        width: 915
-        height: 575
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b9357c1fc6605f4d9fe1bf65f094dad
-      internalID: -17406005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: smoke_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 318
-        width: 915
-        height: 575
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1851
+        y: 2
+        width: 398
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,12 +195,12 @@ TextureImporter:
       name: smoke_4
       rect:
         serializedVersion: 2
-        x: 1019
-        y: 318
-        width: 915
-        height: 575
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 3990
+        y: 6
+        width: 810
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,22 +213,43 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: smoke_5
+      name: smoke_7
       rect:
         serializedVersion: 2
-        x: 1935
-        y: 318
-        width: 915
-        height: 575
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 2373
+        y: 0
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f4e7068594363346851a2ea2144796c
-      internalID: -1745411182
+      spriteID: c3ad56fe181b5a342acfbf3bf1992979
+      internalID: -358374384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke_8
+      rect:
+        serializedVersion: 2
+        x: 3092
+        y: 13
+        width: 863
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0db0b395fd3e444af9337f7838348d
+      internalID: 1894939820
       vertices: []
       indices: 
       edges: []
@@ -265,12 +265,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      smoke_12: -1965115691
       smoke_1: -419136979
       smoke_3: 501329524
+      smoke_13: 453446160
       smoke_2: -17406005
+      smoke_14: 519700409
+      smoke_11: 1225705876
+      smoke_7: -358374384
+      smoke_6: 714143515
+      smoke_10: 663334324
       smoke_0: -1789491700
       smoke_5: -1745411182
+      smoke_9: -593399193
       smoke_4: -1259210616
+      smoke_8: 1894939820
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

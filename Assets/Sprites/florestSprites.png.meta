@@ -132,12 +132,12 @@ TextureImporter:
       name: florestSprites_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 385
+        x: 20
+        y: 226
         width: 204
         height: 414
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: florestSprites_1
       rect:
         serializedVersion: 2
-        x: 313
-        y: 512
+        x: 276
+        y: 225
         width: 199
-        height: 304
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: florestSprites_2
       rect:
         serializedVersion: 2
-        x: 614
-        y: 502
+        x: 511
+        y: 225
         width: 201
         height: 294
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,12 +195,12 @@ TextureImporter:
       name: florestSprites_3
       rect:
         serializedVersion: 2
-        x: 231
-        y: 173
-        width: 212
-        height: 212
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 749
+        y: 226
+        width: 205
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: florestSprites_4
       rect:
         serializedVersion: 2
-        x: 514
-        y: 181
-        width: 205
-        height: 203
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 19
+        y: 10
+        width: 201
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,36 +234,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: florestSprites_5
-      rect:
-        serializedVersion: 2
-        x: 661
-        y: 353
-        width: 194
-        height: 91
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b805ebbd28cd08479f208fccf626a47
-      internalID: -1907527715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: florestSprites_6
       rect:
         serializedVersion: 2
-        x: 24
-        y: 33
-        width: 201
-        height: 210
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 267
+        y: 10
+        width: 212
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -279,12 +258,12 @@ TextureImporter:
       name: florestSprites_7
       rect:
         serializedVersion: 2
-        x: 324
-        y: 33
-        width: 201
-        height: 119
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 527
+        y: 10
+        width: 194
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -300,12 +279,12 @@ TextureImporter:
       name: florestSprites_8
       rect:
         serializedVersion: 2
-        x: 539
-        y: 29
-        width: 201
-        height: 115
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 766
+        y: 10
+        width: 200
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,6 +292,27 @@ TextureImporter:
       bones: []
       spriteID: bbd02fa103d76824cb25be37b8bba9ee
       internalID: -380381768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: florestSprites_9
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 10
+        width: 200
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63465ba529030d848953197235138ca2
+      internalID: -1905565433
       vertices: []
       indices: 
       edges: []
@@ -334,6 +334,7 @@ TextureImporter:
       florestSprites_4: 1244094583
       florestSprites_8: -380381768
       florestSprites_0: -1682592538
+      florestSprites_9: -1905565433
       florestSprites_6: 176254311
       florestSprites_7: 694416666
       florestSprites_2: -1378067060

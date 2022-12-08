@@ -6,16 +6,24 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameController : MonoBehaviour
 {
+    [Header("Bunny Settings")]
+    public float jump;
+    public float runSpeed;
+    public float limitMaxX;
+    public float limitMinX;
+
+    [Header("Score Settings")]
+    public int currentScore;
+    public int carrotScore;
+    public int easterEggScore;
+
     [Header("Scene Settings")]
     public float speedMove;
     public float distanceToDestroy;
     public float sceneSize;
     public GameObject[] prefabScenesToSpawn;
 
-    [Header("Score Settings")]
-    public int currentScore;
-    public int carrotScore;
-    public int easterEggScore;
+
 
     void Start()
     {
