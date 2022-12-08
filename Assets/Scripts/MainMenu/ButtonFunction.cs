@@ -14,4 +14,9 @@ public class ButtonFunction : MonoBehaviour
     {
         Application.Quit();
     }
+    public void teste()
+    {
+        print("apertei o botão");
+    }
+
 }

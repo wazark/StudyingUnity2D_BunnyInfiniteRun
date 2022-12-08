@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Maps/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Maps/map_01.unity
+    guid: ca33e4a4f5a26c448b23d0f0f5b7a6c7
+  - enabled: 1
     path: Assets/Maps/map_gameover.unity
     guid: fbb5ea26acdd0084c9b2099a7292549b
   m_configObjects: {}
