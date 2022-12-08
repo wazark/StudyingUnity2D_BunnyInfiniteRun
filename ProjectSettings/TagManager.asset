@@ -41,8 +41,14 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
+    uniqueID: 1531230907
+    locked: 0
+  - name: EnvironmentsInGame
     uniqueID: 1896331655
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HUD
+    uniqueID: 582057865
     locked: 0
