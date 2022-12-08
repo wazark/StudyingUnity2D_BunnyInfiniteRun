@@ -26,7 +26,7 @@ public class BunnyController : MonoBehaviour
     void Update()
     {
         playerJump();
-        playerMovement();
+        //playerMovement();
     }
     void FixedUpdate()
     {
