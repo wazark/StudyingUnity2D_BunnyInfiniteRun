@@ -362,7 +362,7 @@ MonoBehaviour:
   currentScore: 0
   carrotScore: 0
   easterEggScore: 0
-  speedMove: -4
+  speedMove: 0
   distanceToDestroy: -106.2256
   sceneSize: 106.2256
   prefabScenesToSpawn:
@@ -534,6 +534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 6999806}
+  gravityTime: 0.05
 --- !u!95 &448211325
 Animator:
   serializedVersion: 4

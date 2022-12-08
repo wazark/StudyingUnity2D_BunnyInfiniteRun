@@ -11,6 +11,7 @@ public class BunnyController : MonoBehaviour
     private bool isNotJumping;
     public Transform groundCheck;
     public float gravityTime;
+    public float gravityScaleToDown;
     
 
     void Start()
@@ -40,7 +41,7 @@ public class BunnyController : MonoBehaviour
     
     void setGravity()
     {
-        playerRBody.gravityScale = 2;
+        playerRBody.gravityScale = gravityScaleToDown;
     }
     
     void playerJump()
