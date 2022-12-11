@@ -9,6 +9,7 @@ public class Character : MonoBehaviour
     private Rigidbody2D playerRB;
     private Animator playerAnimator;
     private SpriteRenderer playerRenderer;
+    
 
     
     private bool isGrounded;
@@ -18,13 +19,17 @@ public class Character : MonoBehaviour
 
     [Header("Objects with Interaction")]
     public Transform groundCheck;
+    public Transform carrotLaunchPosition;
     public LayerMask whatIsGround;
+    public GameObject carrotsBullet;
+
 
     [Header("Character Settings")]
     public float speedMove;
     public float jumpForce;
     public bool isFaceLeft;
     public int jumpPlus;
+    public float strenght;
     
     
 
@@ -87,8 +92,14 @@ public class Character : MonoBehaviour
         playerRB.velocity = new Vector2(horizontal * speedMove, speedY);
 
         doubleJump();
-        
-        
+
+        // Atira cenouras
+        if (Input.GetButtonDown("Fire1"))
+        {
+            fireCarrot();
+        }
+
+
     }
 
     // Função responsável por virar o personagem
@@ -97,6 +108,7 @@ public class Character : MonoBehaviour
         isFaceLeft = !isFaceLeft;
         float x = transform.localScale.x;
         x *= -1; //inverte o sinal do scale;
+        strenght *= -1; // inverte a força do tiro para ir do lado oposto.
 
         transform.localScale= new Vector3(x, transform.localScale.y, transform.localScale.z);
     }
@@ -123,6 +135,19 @@ public class Character : MonoBehaviour
         else if (Input.GetButtonDown("Jump") && extraJump == 0 && isGrounded == true) // caso não tenha double jump.
         {
             jump();
+        }
+    }
+    //função resposável por instanciar o objeto e move-lo.
+    void fireCarrot()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            GameObject temp = Instantiate(carrotsBullet);
+            temp.transform.position = carrotLaunchPosition.position;
+            temp.GetComponent<Rigidbody2D>().AddForce(new Vector2(strenght, 0));
+
+            Destroy(temp, 1f);
+
         }
     }
 }
