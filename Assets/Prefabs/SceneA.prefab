@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1492067497}
   - component: {fileID: 1492067496}
   - component: {fileID: 1492067498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: florestSprites_8 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,10 +127,10 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 203
+  m_SurfaceArc: 257.18
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &215490809490536186
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 4237574832174466135}
   - component: {fileID: 155817987982370940}
   - component: {fileID: 58748937}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: florestSprites_8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,10 +426,10 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 203
+  m_SurfaceArc: 257.18
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &1286147054190595663
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 5066341591372085796}
   - component: {fileID: 8076215863971585476}
   - component: {fileID: 1137613427}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: florestSprites_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,10 +809,10 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 203
+  m_SurfaceArc: 257.18
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &1870982844614887441
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 1170428421596066156}
   - component: {fileID: 8239216891058784114}
   - component: {fileID: 108291635}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: florestSprites_8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1108,10 +1108,10 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 203
+  m_SurfaceArc: 257.18
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &3132814519419732096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,7 +1320,7 @@ Transform:
   - {fileID: 7593992927820337356}
   - {fileID: 4847787509258913298}
   m_Father: {fileID: 3132814520478189257}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3132814519463408639
 GameObject:
@@ -2105,7 +2105,10 @@ Transform:
   m_LocalPosition: {x: -1.190058, y: -4.6718626, z: 0.35169503}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7203797812408548139}
+  - {fileID: 7908913482408233372}
+  - {fileID: 7215560879510812820}
   m_Father: {fileID: 3132814520478189257}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2651,7 +2654,7 @@ Transform:
   - {fileID: 371102296026898730}
   - {fileID: 1492067495}
   m_Father: {fileID: 3132814520478189257}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3132814520438644237
 GameObject:
@@ -2769,9 +2772,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3132814520097697990}
-  - {fileID: 7203797812408548139}
-  - {fileID: 7908913482408233372}
-  - {fileID: 7215560879510812820}
   - {fileID: 3132814521127986738}
   - {fileID: 3132814521024558531}
   - {fileID: 3132814520356312064}
@@ -3427,7 +3427,7 @@ Transform:
   - {fileID: 245320953644996598}
   - {fileID: 6428448658884314567}
   m_Father: {fileID: 3132814520478189257}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3132814520786377530
 GameObject:
@@ -4049,7 +4049,7 @@ Transform:
   - {fileID: 1459165618538420643}
   - {fileID: 4261583707595537852}
   m_Father: {fileID: 3132814520478189257}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3132814521088352577
 GameObject:
@@ -4172,7 +4172,7 @@ Transform:
   - {fileID: 3132814520828437762}
   - {fileID: 3132814520851937655}
   m_Father: {fileID: 3132814520478189257}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3132814521236032484
 GameObject:
@@ -5110,7 +5110,7 @@ GameObject:
   - component: {fileID: 4361806347776098542}
   - component: {fileID: 169744997596411734}
   - component: {fileID: 1587768209}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: florestSprites_8 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5225,10 +5225,10 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 203
+  m_SurfaceArc: 257.18
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &4451750491836303688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5829,7 +5829,7 @@ GameObject:
   - component: {fileID: 1501939735617479565}
   - component: {fileID: 1525626927715248429}
   - component: {fileID: 1587755016}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: florestSprites_8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5944,10 +5944,10 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 203
+  m_SurfaceArc: 257.18
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &6239934035008724240
 GameObject:
   m_ObjectHideFlags: 0
@@ -5960,7 +5960,7 @@ GameObject:
   - component: {fileID: 745559967877998225}
   - component: {fileID: 314697786677638675}
   - component: {fileID: 925542274}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: florestSprites_8 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6075,10 +6075,10 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 203
+  m_SurfaceArc: 257.18
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &6364102370021898533
 GameObject:
   m_ObjectHideFlags: 0
@@ -6343,7 +6343,7 @@ GameObject:
   - component: {fileID: 6311591367267925373}
   - component: {fileID: 986992427114747605}
   - component: {fileID: 1011906045}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: florestSprites_8 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6458,10 +6458,10 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 203
+  m_SurfaceArc: 257.18
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &7354318224107276921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6556,7 +6556,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7215560879510812820}
   - component: {fileID: 3777146041100560765}
-  m_Layer: 0
+  - component: {fileID: 6352828246185596538}
+  m_Layer: 3
   m_Name: florestSprites_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6571,12 +6572,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7369737977714845935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.3773, y: -6.2453637, z: 0.30353215}
+  m_LocalPosition: {x: 41.56736, y: -1.5735011, z: -0.048162878}
   m_LocalScale: {x: 1.3548, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3132814520478189257}
-  m_RootOrder: 3
+  m_Father: {fileID: 3132814520097697990}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3777146041100560765
 SpriteRenderer:
@@ -6630,6 +6631,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6352828246185596538
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369737977714845935}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004963696, y: -0.25510025}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.38}
+    newSize: {x: 2, y: 1.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9285866, y: 0.8697996}
+  m_EdgeRadius: 0
 --- !u!1 &7528018962049727102
 GameObject:
   m_ObjectHideFlags: 0
@@ -6640,7 +6667,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7908913482408233372}
   - component: {fileID: 1819674163622404702}
-  m_Layer: 0
+  - component: {fileID: 8858922498392473305}
+  m_Layer: 3
   m_Name: florestSprites_8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6655,12 +6683,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7528018962049727102}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.55, y: -5.52, z: 0.30353215}
+  m_LocalPosition: {x: 68.74006, y: -0.8481374, z: -0.048162878}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3132814520478189257}
-  m_RootOrder: 2
+  m_Father: {fileID: 3132814520097697990}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1819674163622404702
 SpriteRenderer:
@@ -6714,6 +6742,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8858922498392473305
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7528018962049727102}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.020298958, y: -0.25510025}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.38}
+    newSize: {x: 51.885227, y: 1.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 51.90043, y: 0.8697996}
+  m_EdgeRadius: 0
 --- !u!1 &7559406066903000469
 GameObject:
   m_ObjectHideFlags: 0
@@ -6726,7 +6780,7 @@ GameObject:
   - component: {fileID: 5355686893069512456}
   - component: {fileID: 1232874167751003676}
   - component: {fileID: 2143857354}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: florestSprites_8 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6841,10 +6895,10 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 203
+  m_SurfaceArc: 257.18
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &7608020108227862413
 GameObject:
   m_ObjectHideFlags: 0
@@ -7023,7 +7077,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7203797812408548139}
   - component: {fileID: 6116293096350845545}
-  m_Layer: 0
+  - component: {fileID: 7379186970039512030}
+  m_Layer: 3
   m_Name: florestSprites_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7038,12 +7093,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8127266469260273990}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.1901, y: -5.52, z: 0.30353215}
+  m_LocalPosition: {x: 14.380157, y: -0.8481374, z: -0.048162878}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3132814520478189257}
-  m_RootOrder: 1
+  m_Father: {fileID: 3132814520097697990}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6116293096350845545
 SpriteRenderer:
@@ -7097,6 +7152,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &7379186970039512030
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127266469260273990}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.020298958, y: -0.25510025}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.38}
+    newSize: {x: 51.885227, y: 1.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 51.90043, y: 0.8697996}
+  m_EdgeRadius: 0
 --- !u!1 &8139850685083437258
 GameObject:
   m_ObjectHideFlags: 0
@@ -7166,7 +7247,7 @@ Transform:
   - {fileID: 2642407337454985584}
   - {fileID: 1675973835408090480}
   m_Father: {fileID: 3132814520478189257}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9114285175535542163
 GameObject:

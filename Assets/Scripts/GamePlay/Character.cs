@@ -10,13 +10,18 @@ public class Character : MonoBehaviour
     private Animator playerAnimator;
     private SpriteRenderer playerRenderer;
 
-    public Transform groundCheck;
+    [Header("Character Settings")]
     private bool isGrounded;
     private int speedX;
     private float speedY;
+    public Transform groundCheck;
+    public LayerMask whatIsGround;
     public float speedMove;
     public float jumpForce;
     public bool isFaceLeft;
+    public int jumpPlus;
+    private int extraJump;
+    
 
     void Start()
     {
@@ -33,7 +38,7 @@ public class Character : MonoBehaviour
     private void FixedUpdate()
     {
         // faz com que a variavel bool ao ter contato com box collider do chão se torne verdadeira. Para isto ela cria um raio de 0.02f para verificar o contato do chão com o transform criado no player.
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.02f); 
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.02f, whatIsGround); 
     }
 
     private void LateUpdate()
@@ -73,12 +78,13 @@ public class Character : MonoBehaviour
 
         // faz a movimentação do personagem no eixo X.
         playerRB.velocity = new Vector2(horizontal * speedMove, speedY);
-        
-        
-        if(Input.GetButtonDown("Jump") && isGrounded == true)
+
+        if (Input.GetButtonDown("Jump") && extraJump > 0)
         {
-            playerRB.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse );
+            jump();
+            extraJump --;
         }
+        
         
     }
 
@@ -90,5 +96,12 @@ public class Character : MonoBehaviour
         x *= -1; //inverte o sinal do scale;
 
         transform.localScale= new Vector3(x, transform.localScale.y, transform.localScale.z);
+    }
+    public void jump()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
+        {
+            playerRB.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        }
     }
 }
