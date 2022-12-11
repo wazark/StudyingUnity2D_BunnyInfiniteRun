@@ -8,15 +8,14 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     [Header("Bunny Settings")]
+    public AudioClip sfxJump;
     public float jump;
     public float runSpeed;
     public float limitMaxX;
     public float limitMinX;
 
     [Header("Score Settings")]
-    public int currentScore;
-    public int carrotScore;
-    public int easterEggScore;
+    public int currentScore;    
     public Text scoreText;
 
     [Header("Scene Settings")]
@@ -29,7 +28,12 @@ public class GameController : MonoBehaviour
     public AudioSource sfxSource;
     public AudioClip sfxPoints;
 
-    
+    [Header("Fire Carrots Settings")]
+    public AudioClip sfxFireCarrot;
+    public int carrotBullet;
+    public int maxAmmo;
+    public float shootDelay;
+
 
 
 
@@ -52,6 +56,14 @@ public class GameController : MonoBehaviour
     public void changeScene(string destinationScene)
     {
         SceneManager.LoadScene(destinationScene);
-    }    
+    }
+    public void currentAmmo(int amount)
+    {              
+        carrotBullet += amount;
+        if(carrotBullet> maxAmmo) 
+        {
+            carrotBullet = maxAmmo;   
+        }
+    }
 
 }

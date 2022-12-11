@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2415102310210019420}
   - component: {fileID: 5565541497093016945}
-  - component: {fileID: 918237412202554372}
+  - component: {fileID: 1902396322882076259}
   m_Layer: 0
   m_Name: carrot
   m_TagString: Collectible
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &918237412202554372
+--- !u!61 &1902396322882076259
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,10 +98,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.475}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.6, y: 0.95}
     newSize: {x: 0.6, y: 0.95}
     adaptiveTilingThreshold: 0.5

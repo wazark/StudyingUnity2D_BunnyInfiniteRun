@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
     private Rigidbody2D playerRB;
     private Animator playerAnimator;
     private SpriteRenderer playerRenderer;
+    private GameController _gameController;
     
-
     
     private bool isGrounded;
     private int speedX;
     private float speedY;
     private int extraJump;
+    private bool isShooting;
 
     [Header("Objects with Interaction")]
     public Transform groundCheck;
@@ -38,6 +40,7 @@ public class Character : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerRenderer = GetComponent<SpriteRenderer>();
+        _gameController = FindObjectOfType(typeof(GameController)) as GameController;
 
         extraJump = jumpPlus;
     }
@@ -94,7 +97,7 @@ public class Character : MonoBehaviour
         doubleJump();
 
         // Atira cenouras
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && _gameController.carrotBullet > 0 && isShooting == false)
         {
             fireCarrot();
         }
@@ -131,23 +134,47 @@ public class Character : MonoBehaviour
         {
             jump();
             extraJump--;
+            _gameController.sfxSource.PlayOneShot(_gameController.sfxJump);
         }
         else if (Input.GetButtonDown("Jump") && extraJump == 0 && isGrounded == true) // caso não tenha double jump.
         {
             jump();
+            _gameController.sfxSource.PlayOneShot(_gameController.sfxJump);
         }
     }
     //função resposável por instanciar o objeto e move-lo.
     void fireCarrot()
     {
-        if(Input.GetButtonDown("Fire1"))
+        _gameController.sfxSource.PlayOneShot(_gameController.sfxFireCarrot);
+        isShooting = true;
+        _gameController.currentAmmo(-1);
+        GameObject temp = Instantiate(carrotsBullet);
+        temp.transform.position = carrotLaunchPosition.position;
+        temp.GetComponent<Rigidbody2D>().AddForce(new Vector2(strenght, 0));
+        StartCoroutine("shootDelay");
+
+        Destroy(temp, 1f);        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch(collision.gameObject.tag) 
         {
-            GameObject temp = Instantiate(carrotsBullet);
-            temp.transform.position = carrotLaunchPosition.position;
-            temp.GetComponent<Rigidbody2D>().AddForce(new Vector2(strenght, 0));
+            case "Collectible":
+                Destroy(collision.gameObject);
+                _gameController.currentAmmo(1);
+                _gameController.scoring(3);
+                break;
 
-            Destroy(temp, 1f);
+            case "Obstacle":
 
+                SceneManager.LoadScene("map_gameover");
+                break;
         }
+    }
+    IEnumerator shootDelay()
+    {
+        yield return new WaitForSeconds(_gameController.shootDelay);
+        isShooting= false;
     }
 }
