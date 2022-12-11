@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 448211321}
   - component: {fileID: 448211320}
   - component: {fileID: 448211325}
-  - component: {fileID: 448211324}
+  - component: {fileID: 448211326}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -466,7 +466,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -524,21 +524,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &448211324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448211318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13789074b413e724f98f5e3663c4b8e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundCheck: {fileID: 6999806}
-  gravityTime: 0.8
-  gravityScaleToDown: 3
 --- !u!95 &448211325
 Animator:
   serializedVersion: 4
@@ -559,6 +544,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &448211326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448211318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9479e3d3e7e2969409d419fd9db85757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 6999806}
+  speedMove: 4
+  jumpForce: 12
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
