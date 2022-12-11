@@ -10,17 +10,22 @@ public class Character : MonoBehaviour
     private Animator playerAnimator;
     private SpriteRenderer playerRenderer;
 
-    [Header("Character Settings")]
+    
     private bool isGrounded;
     private int speedX;
     private float speedY;
+    private int extraJump;
+
+    [Header("Objects with Interaction")]
     public Transform groundCheck;
     public LayerMask whatIsGround;
+
+    [Header("Character Settings")]
     public float speedMove;
     public float jumpForce;
     public bool isFaceLeft;
     public int jumpPlus;
-    private int extraJump;
+    
     
 
     void Start()
@@ -28,6 +33,8 @@ public class Character : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerRenderer = GetComponent<SpriteRenderer>();
+
+        extraJump = jumpPlus;
     }
     
     void Update()
@@ -79,11 +86,7 @@ public class Character : MonoBehaviour
         // faz a movimentação do personagem no eixo X.
         playerRB.velocity = new Vector2(horizontal * speedMove, speedY);
 
-        if (Input.GetButtonDown("Jump") && extraJump > 0)
-        {
-            jump();
-            extraJump --;
-        }
+        doubleJump();
         
         
     }
@@ -97,11 +100,26 @@ public class Character : MonoBehaviour
 
         transform.localScale= new Vector3(x, transform.localScale.y, transform.localScale.z);
     }
+    //Função responsável pelo pulo do personagem.
     public void jump()
     {
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             playerRB.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        }
+    }
+    //Função responsável pelo pulo duplo do jogador (caso a variável extra jump seja maior que 1).
+    void doubleJump()
+    {
+
+        if (isGrounded == true)
+        {
+            extraJump = jumpPlus;
+        }
+        if (Input.GetButtonDown("Jump") && extraJump > 0)
+        {
+            jump();
+            extraJump--;
         }
     }
 }
