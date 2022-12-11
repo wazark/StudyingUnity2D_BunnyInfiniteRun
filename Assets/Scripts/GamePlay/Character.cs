@@ -16,6 +16,7 @@ public class Character : MonoBehaviour
     private float speedY;
     public float speedMove;
     public float jumpForce;
+    public bool isFaceLeft;
 
     void Start()
     {
@@ -26,8 +27,7 @@ public class Character : MonoBehaviour
     
     void Update()
     {
-        Locomotion();
-        
+        Locomotion();        
     }
 
     private void FixedUpdate()
@@ -48,22 +48,25 @@ public class Character : MonoBehaviour
     {
         
         // define o valor da variavél speedX conforme a movimentação, esta variavel passará os valores para o Animator
-        // vira o sprite render do personagem conforme o lado que esta se movendo e ao parar, permanece virado para o lado da ultima movimentação.
+        
         float horizontal = Input.GetAxisRaw("Horizontal");
-        if (horizontal < 0)
+        if (horizontal !=0)        
         {
-            speedX = -1;
-            playerRenderer.flipX = true;
+            speedX = 1;            
         }
-        else if(horizontal > 0)
+        else 
         {
-            speedX = 1;
-            playerRenderer.flipX = false;
+            speedX = 0;            
         }
-        else if (horizontal == 0) 
+        if(isFaceLeft == true && horizontal > 0)
         {
-            speedX = 0;
+            flipCharacter();
         }
+        if(isFaceLeft == false && horizontal < 0)
+        {
+            flipCharacter();
+        }
+        
 
         // a variável speedY receberá os valores da movimentação do rigidbody2D no eixo Y.
         speedY = playerRB.velocity.y;
@@ -77,5 +80,15 @@ public class Character : MonoBehaviour
             playerRB.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse );
         }
         
+    }
+
+    // Função responsável por virar o personagem
+    void flipCharacter()
+    {
+        isFaceLeft = !isFaceLeft;
+        float x = transform.localScale.x;
+        x *= -1; //inverte o sinal do scale;
+
+        transform.localScale= new Vector3(x, transform.localScale.y, transform.localScale.z);
     }
 }
