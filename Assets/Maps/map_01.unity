@@ -563,7 +563,7 @@ MonoBehaviour:
   speedMove: 4
   jumpForce: 12
   isFaceLeft: 0
-  jumpPlus: 1
+  jumpPlus: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

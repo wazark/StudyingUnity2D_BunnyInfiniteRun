@@ -103,10 +103,9 @@ public class Character : MonoBehaviour
     //Função responsável pelo pulo do personagem.
     public void jump()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded == true)
-        {
-            playerRB.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        }
+        playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
+        playerRB.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+       
     }
     //Função responsável pelo pulo duplo do jogador (caso a variável extra jump seja maior que 1).
     void doubleJump()
@@ -116,10 +115,14 @@ public class Character : MonoBehaviour
         {
             extraJump = jumpPlus;
         }
-        if (Input.GetButtonDown("Jump") && extraJump > 0)
+        if (Input.GetButtonDown("Jump") && extraJump > 0) // caso tenha o double jump, diminui o pulo extra a cada ação de jump no ar.
         {
             jump();
             extraJump--;
+        }
+        else if (Input.GetButtonDown("Jump") && extraJump == 0 && isGrounded == true) // caso não tenha double jump.
+        {
+            jump();
         }
     }
 }
