@@ -363,7 +363,7 @@ MonoBehaviour:
   carrotScore: 0
   easterEggScore: 0
   scoreText: {fileID: 1765274661}
-  speedMove: -4
+  speedMove: 0
   distanceToDestroy: -106.2256
   sceneSize: 106.2256
   prefabScenesToSpawn:
