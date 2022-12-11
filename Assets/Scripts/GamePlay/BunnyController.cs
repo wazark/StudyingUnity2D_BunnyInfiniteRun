@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class BunnyController : MonoBehaviour
 {
     private Rigidbody2D playerRBody;
@@ -63,10 +64,12 @@ public class BunnyController : MonoBehaviour
         if(movement < 0)
         {
             playerRenderer.flipX= true;
+            
         }
         else if(movement > 0) 
         {
             playerRenderer.flipX= false;
+            
         }
 
         float posX = transform.position.x;
