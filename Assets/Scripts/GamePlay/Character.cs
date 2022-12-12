@@ -24,6 +24,7 @@ public class Character : MonoBehaviour
     public Transform carrotLaunchPosition;
     public LayerMask whatIsGround;
     public GameObject carrotsBullet;
+    public GameObject EggGrenade;
 
 
     [Header("Character Settings")]
@@ -31,9 +32,10 @@ public class Character : MonoBehaviour
     public float jumpForce;
     public bool isFaceLeft;
     public int jumpPlus;
-    public float strenght;
-    
-    
+    public float strenghtFireX;
+    public float strenghtFireY;
+
+
 
     void Start()
     {
@@ -101,6 +103,10 @@ public class Character : MonoBehaviour
         {
             fireCarrot();
         }
+        if(Input.GetButtonDown("Fire2") && _gameController.eggGrenade > 0 && isShooting == false)
+        {
+            fireEggGrenade();
+        }
 
 
     }
@@ -111,7 +117,7 @@ public class Character : MonoBehaviour
         isFaceLeft = !isFaceLeft;
         float x = transform.localScale.x;
         x *= -1; //inverte o sinal do scale;
-        strenght *= -1; // inverte a força do tiro para ir do lado oposto.
+        strenghtFireX *= -1; // inverte a força do tiro para ir do lado oposto.
 
         transform.localScale= new Vector3(x, transform.localScale.y, transform.localScale.z);
     }
@@ -150,10 +156,23 @@ public class Character : MonoBehaviour
         _gameController.currentAmmo(-1);
         GameObject temp = Instantiate(carrotsBullet);
         temp.transform.position = carrotLaunchPosition.position;
-        temp.GetComponent<Rigidbody2D>().AddForce(new Vector2(strenght, 0));
+        temp.GetComponent<Rigidbody2D>().AddForce(new Vector2(strenghtFireX, 0));
         StartCoroutine("shootDelay");
 
         Destroy(temp, 1f);        
+    }
+
+    void fireEggGrenade()
+    {
+        _gameController.sfxSource.PlayOneShot(_gameController.sfxFireCarrot);
+        isShooting= true;
+        _gameController.currentGrenade(-1);
+        GameObject temp= Instantiate(EggGrenade);
+        temp. transform.position = carrotLaunchPosition.position;
+        temp.GetComponent<Rigidbody2D>().AddForce(new Vector2(strenghtFireX, strenghtFireY));
+        StartCoroutine("shootDelay");
+
+        Destroy(temp, 1f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -174,7 +193,7 @@ public class Character : MonoBehaviour
 
                     case "egg":
 
-                        _gameController.currentAmmo(iDC.amountAmmo);
+                        _gameController.currentGrenade (iDC.amountAmmo);
                         _gameController.scoring(iDC.amountScore);
 
                         break;

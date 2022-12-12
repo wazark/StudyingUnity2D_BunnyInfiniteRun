@@ -31,6 +31,8 @@ public class GameController : MonoBehaviour
     [Header("Fire Carrots Settings")]
     public AudioClip sfxFireCarrot;
     public int carrotBullet;
+    public int eggGrenade;
+    public int maxGrenade;
     public int maxAmmo;
     public float shootDelay;
 
@@ -57,13 +59,20 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(destinationScene);
     }
-    public void currentAmmo(int amount)
+    public void currentAmmo(int amountBullet)
     {              
-        carrotBullet += amount;
+        carrotBullet += amountBullet;
         if(carrotBullet> maxAmmo) 
         {
             carrotBullet = maxAmmo;   
         }
     }
-
+    public void currentGrenade(int amountGrenada)
+    {
+        eggGrenade += amountGrenada;
+        if( eggGrenade > maxGrenade)
+        {
+            eggGrenade= maxGrenade;
+        }
+    }
 }
