@@ -161,10 +161,30 @@ public class Character : MonoBehaviour
         switch(collision.gameObject.tag) 
         {
             case "Collectible":
+                
+                IDCollectible iDC = collision.gameObject.GetComponent<IDCollectible>();                
+
+                switch (iDC.itemName)
+                {
+                    case "carrot":                        
+                        _gameController.currentAmmo(iDC.amountAmmo);
+                        _gameController.scoring(iDC.amountScore);
+
+                        break;
+
+                    case "egg":
+
+                        _gameController.currentAmmo(iDC.amountAmmo);
+                        _gameController.scoring(iDC.amountScore);
+
+                        break;
+
+                }
+
                 Destroy(collision.gameObject);
-                _gameController.currentAmmo(1);
-                _gameController.scoring(3);
+
                 break;
+
 
             case "Obstacle":
 
